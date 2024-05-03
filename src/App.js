@@ -11,7 +11,7 @@ function App() {
         window.addEventListener('resize', handleResize)
 
         return () => {
-            console.log('Reset useEffect')
+            window.removeEventListener('resize', handleResize)
         }
     }, []);
     return (
